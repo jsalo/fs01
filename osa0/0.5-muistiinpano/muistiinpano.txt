@@ -1,0 +1,17 @@
+selain->palvelint: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+palvelin->selain: sovelluksen HTML-koodi
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.csshttps://studies.cs.helsinki.fi/exampleapp/main.css
+palvelin->selain: sovelluksen käyttämä tyylitiedosto
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+palvelin->selain: sovelluksen javaskripti
+
+Selain alkaa suorittamaan javaskriptiä kun sivu on latautunut.
+
+Javaskriptissä pyydetään palvelimelta JSON-tiedostoa (data.json).
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+palvelin->selain: sovelluksen pyytämä JSON-tiedosto
+
+Skripti lisää listaan JSON-tiedoston datasta content-kentän tekstin elementeiksi (li) funktiolla redrawNotes
